@@ -44,9 +44,9 @@ func main() {
 	if len(command) < 1 {
 		fmt.Printf("%s [command] [param1 [param2 [param3]...]])\n\n", os.Args[0])
 		flag.Usage()
-		println("\nThe supplied command is parsed for the values, that are replace with the received event values:")
-		println("  [[Cookie]]=unique cookie of the event\n  [[Name]]=File/Directory name\n  [[Info]]=Debug information.")
-		println("\nExamples:\nOpen newly created files/folders in Explorer:\n  notifyexec.exe -event=create explorer.exe [[Filename]]")
+		fmt.Printf("\nThe supplied command is parsed for the values, that are replace with the received event values:")
+		fmt.Printf("  [[Cookie]]=unique cookie of the event\n  [[Name]]=File/Directory name\n  [[Info]]=Debug information.")
+		fmt.Printf("\nExamples:\nOpen newly created files/folders in Explorer:\n  notifyexec.exe -event=create explorer.exe [[Filename]]")
 		return
 	}
 
